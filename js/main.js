@@ -45,7 +45,7 @@
   }
 
   function redirectWhatsApp(data) {
-    if (data.investimento === "nao-tenho-dinheiro") {
+    if (!data.investimento || data.investimento === "nao-tenho-dinheiro") {
       thanksBox.classList.remove("hidden");
       return;
     }
@@ -99,12 +99,6 @@
       console.log("VALIDACAO: anuncia vazio");
       var group = document.querySelector(".radio-group").closest(".form-group");
       if (group) group.classList.add("error");
-      valid = false;
-    }
-
-    if (!investimento.value) {
-      console.log("VALIDACAO: investimento vazio");
-      showError(investimento, "Selecione o valor que pretende investir");
       valid = false;
     }
 
