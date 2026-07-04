@@ -70,7 +70,7 @@
       " Pretendo investir " + getLabel(data.investimento, investOpts) + "." +
       " Gostaria de saber mais sobre o sistema de geração de clientes.";
 
-    window.location.href = "https://wa.me/55519801618744?text=" + encodeURIComponent(msg);
+    window.location.href = "https://wa.me/5551980168744?text=" + encodeURIComponent(msg);
   }
 
   function validate() {
