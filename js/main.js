@@ -109,7 +109,14 @@
   form.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    if (!validate()) return;
+    console.log("Form submit disparado");
+
+    if (!validate()) {
+      console.log("Validação falhou");
+      return;
+    }
+
+    console.log("Validação passou");
 
     var telefone = document.getElementById("telefone");
 
@@ -122,6 +129,8 @@
       investimento: investimento.value || "nao-informado"
     };
 
+    console.log("Dados enviados:", data);
+
     var submitBtn = form.querySelector(".cta-button");
     submitBtn.disabled = true;
     submitBtn.textContent = "Enviando...";
@@ -133,20 +142,26 @@
       return;
     }
 
+    var redirecionou = false;
+
+    function finalizar() {
+      if (redirecionou) return;
+      redirecionou = true;
+      console.log("Finalizando e redirecionando para WhatsApp");
+      form.classList.add("hidden");
+      redirectWhatsApp(data);
+    }
+
     fetch(FORM_URL, {
       method: "POST",
       mode: "no-cors",
       headers: { "Content-Type": "text/plain" },
       body: JSON.stringify(data)
     })
-      .then(function () {
-        form.classList.add("hidden");
-        redirectWhatsApp(data);
-      })
-      .catch(function () {
-        form.classList.add("hidden");
-        redirectWhatsApp(data);
-      });
+      .then(finalizar)
+      .catch(finalizar);
+
+    setTimeout(finalizar, 3000);
   });
 
   var ctas = document.querySelectorAll('a[href="#form-section"]');
