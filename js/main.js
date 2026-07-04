@@ -135,23 +135,17 @@
 
     fetch(FORM_URL, {
       method: "POST",
+      mode: "no-cors",
       headers: { "Content-Type": "text/plain" },
       body: JSON.stringify(data)
     })
-      .then(function (res) {
-        return res.json();
-      })
-      .then(function (json) {
-        if (!json.success) {
-          console.error("Apps Script error:", json.error);
-        }
+      .then(function () {
         form.classList.add("hidden");
         redirectWhatsApp(data);
       })
-      .catch(function (err) {
-        console.error("Fetch error:", err);
+      .catch(function () {
         form.classList.add("hidden");
-        thanksBox.classList.remove("hidden");
+        redirectWhatsApp(data);
       });
   });
 
