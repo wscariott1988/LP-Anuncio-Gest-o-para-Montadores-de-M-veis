@@ -98,6 +98,11 @@
       valid = false;
     }
 
+    if (!investimento.value) {
+      showError(investimento, "Selecione o valor que pretende investir");
+      valid = false;
+    }
+
     return valid;
   }
 
