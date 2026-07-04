@@ -720,6 +720,159 @@ h2 {
   display: none !important;
 }
 
+/* === FILTRO QUALIFICAÇÃO === */
+#filtro-qualificacao {
+  background: var(--card-bg);
+}
+
+.section-sub {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.qualificacao-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.qualificacao-card {
+  padding: 24px;
+  border-radius: var(--radius);
+  border: 1px solid #E5E7EB;
+}
+
+.qualificacao-card.negativo {
+  background: #FEF2F2;
+  border-color: #FECACA;
+}
+
+.qualificacao-card.positivo {
+  background: #F0FDF4;
+  border-color: #BBF7D0;
+}
+
+.qualificacao-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  margin-bottom: 14px;
+}
+
+.qualificacao-card.negativo h3 {
+  color: #DC2626;
+}
+
+.qualificacao-card.positivo h3 {
+  color: #16A34A;
+}
+
+.qualificacao-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.qualificacao-card ul li {
+  padding: 5px 0 5px 22px;
+  position: relative;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.qualificacao-card.negativo ul li::before {
+  content: "✕";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  font-size: 0.8rem;
+  color: #DC2626;
+}
+
+.qualificacao-card.positivo ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  font-size: 0.8rem;
+  color: #16A34A;
+}
+
+.qualificacao-autoridade {
+  background: rgba(255, 122, 0, 0.08);
+  border-left: 4px solid var(--accent);
+  padding: 16px 18px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  margin-bottom: 24px;
+}
+
+.qualificacao-autoridade p {
+  font-size: 0.95rem;
+  color: var(--primary);
+  line-height: 1.5;
+}
+
+#filtro-qualificacao .cta-button {
+  margin-top: 0;
+}
+
+/* === HERO WARNING === */
+.hero-warning {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+/* === RESULTADOS DISCLAIMER === */
+.resultados-disclaimer {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+/* === MCD EXPLAINER === */
+.mcd-explainer {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  font-style: italic;
+  margin-bottom: 14px;
+  line-height: 1.4;
+}
+
+/* === FORM CONTEXT === */
+.form-context {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+.form-help {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+@media (min-width: 1024px) {
+  .qualificacao-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .qualificacao-card {
+    padding: 28px;
+  }
+
+  .hero-warning {
+    font-size: 0.9rem;
+  }
+}
+
 /* === CTA FINAL === */
 #cta-final {
   background: var(--primary);
