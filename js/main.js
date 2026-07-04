@@ -78,27 +78,32 @@
     clearErrors();
 
     if (!nome.value.trim()) {
+      console.log("VALIDACAO: nome vazio");
       showError(nome, "Informe seu nome");
       valid = false;
     }
 
     if (!cidade.value.trim()) {
+      console.log("VALIDACAO: cidade vazio");
       showError(cidade, "Informe sua cidade");
       valid = false;
     }
 
     if (!clientes.value) {
+      console.log("VALIDACAO: clientes vazio");
       showError(clientes, "Selecione quantos clientes atende");
       valid = false;
     }
 
     if (!getRadioValue("anuncia")) {
+      console.log("VALIDACAO: anuncia vazio");
       var group = document.querySelector(".radio-group").closest(".form-group");
       if (group) group.classList.add("error");
       valid = false;
     }
 
     if (!investimento.value) {
+      console.log("VALIDACAO: investimento vazio");
       showError(investimento, "Selecione o valor que pretende investir");
       valid = false;
     }
