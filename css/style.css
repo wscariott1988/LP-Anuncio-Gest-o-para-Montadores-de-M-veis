@@ -466,6 +466,22 @@ h2 {
   box-shadow: 0 0 0 1px rgba(255, 122, 0, 0.12), var(--shadow);
 }
 
+.investimento-mcd-explicacao {
+  background: #F0F9FF;
+  border: 1px solid #BAE6FD;
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.investimento-mcd-explicacao strong {
+  font-weight: 700;
+  color: var(--primary);
+}
+
 .investimento-card h3 {
   font-family: var(--font-heading);
   font-size: 1.05rem;
