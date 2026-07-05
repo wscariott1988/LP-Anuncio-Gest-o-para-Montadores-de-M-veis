@@ -751,6 +751,18 @@ h2 {
   font-style: italic;
 }
 
+.resultados-aviso {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  font-style: italic;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  background: rgba(255, 122, 0, 0.06);
+  padding: 14px 18px;
+  border-radius: var(--radius-sm);
+  border-left: 4px solid var(--accent);
+}
+
 /* === INVESTIMENTO INFO === */
 .investimento-info {
   font-size: 0.85rem;
@@ -758,6 +770,18 @@ h2 {
   font-style: italic;
   margin-bottom: 16px;
   line-height: 1.4;
+}
+
+.investimento-friccao {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 24px;
+  line-height: 1.5;
+  background: rgba(255, 122, 0, 0.08);
+  padding: 16px 20px;
+  border-radius: var(--radius-sm);
+  border-left: 4px solid var(--accent);
 }
 
 /* === APRENDER (grid) === */
