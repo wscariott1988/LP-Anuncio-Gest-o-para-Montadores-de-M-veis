@@ -147,7 +147,11 @@ h2 {
 
 /* === PROBLEMA === */
 #problema {
-  background: var(--card-bg);
+  background: #1E293B;
+}
+
+#problema h2 {
+  color: var(--text-white);
 }
 
 .card-problema {
@@ -332,7 +336,10 @@ h2 {
 
 #resultados .cta-button,
 #como-funciona .cta-button,
-#investimento-section .cta-button {
+#investimento-section .cta-button,
+#enquanto-trabalha .cta-button,
+#indicado .cta-button,
+#faq .cta-button {
   margin-top: 28px;
 }
 
@@ -440,9 +447,9 @@ h2 {
 
 /* === INVESTIMENTO === */
 #investimento-section {
-  background: #F0F9FF;
-  border-top: 1px solid #BAE6FD;
-  border-bottom: 1px solid #BAE6FD;
+  background: var(--bg);
+  border-top: 1px solid #E5E7EB;
+  border-bottom: 1px solid #E5E7EB;
 }
 
 .investimento-sub {
@@ -701,6 +708,18 @@ h2 {
   margin-right: 8px;
 }
 
+.tension-highlight {
+  background: rgba(255, 122, 0, 0.08);
+  border-left: 4px solid var(--accent);
+  padding: 16px 18px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  margin-bottom: 24px;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--primary);
+  font-weight: 600;
+}
+
 @media (min-width: 1024px) {
   .divisao-grid {
     display: grid;
@@ -928,7 +947,8 @@ h2 {
 
 /* === FORM === */
 #form-section {
-  background: var(--bg);
+  background: var(--card-bg);
+  border-top: 4px solid var(--accent);
 }
 
 .form-intro {
@@ -1244,6 +1264,15 @@ h2 {
   color: rgba(255, 255, 255, 0.8);
   margin-bottom: 28px;
   font-size: 1.05rem;
+}
+
+.cta-urgency {
+  font-size: 0.9rem;
+  color: var(--accent);
+  font-weight: 700;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
 /* === FOOTER === */
