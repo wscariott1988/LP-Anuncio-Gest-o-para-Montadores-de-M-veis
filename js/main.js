@@ -178,4 +178,22 @@
     })(ctas[i]);
   }
 
+  // FAQ accordion
+  var faqQuestions = document.querySelectorAll('.faq-question');
+  for (var i = 0; i < faqQuestions.length; i++) {
+    (function (q) {
+      q.addEventListener("click", function () {
+        var parent = this.parentNode;
+        var isActive = parent.classList.contains("active");
+        var allItems = parent.parentNode.querySelectorAll('.faq-item');
+        for (var j = 0; j < allItems.length; j++) {
+          allItems[j].classList.remove("active");
+        }
+        if (!isActive) {
+          parent.classList.add("active");
+        }
+      });
+    })(faqQuestions[i]);
+  }
+
 })();

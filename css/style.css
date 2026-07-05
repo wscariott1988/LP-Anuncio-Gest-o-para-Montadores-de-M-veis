@@ -846,7 +846,7 @@ h2 {
   }
 }
 
-/* === FAQ === */
+/* === FAQ (acordeão) === */
 #faq {
   background: var(--bg);
 }
@@ -858,7 +858,6 @@ h2 {
 }
 
 .faq-item {
-  padding: 20px 0;
   border-bottom: 1px solid #E5E7EB;
 }
 
@@ -866,18 +865,50 @@ h2 {
   border-bottom: none;
 }
 
-.faq-item h3 {
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 0;
+  cursor: pointer;
+  user-select: none;
+}
+
+.faq-question h3 {
   font-family: var(--font-heading);
   font-size: 1rem;
   color: var(--primary);
-  margin-bottom: 8px;
   line-height: 1.4;
+  margin-bottom: 0;
 }
 
-.faq-item p {
+.faq-icon {
+  flex-shrink: 0;
+  transition: transform 0.2s;
+  color: var(--accent);
+  line-height: 0;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 300px;
+}
+
+.faq-answer p {
   font-size: 0.9rem;
   color: var(--text-light);
   line-height: 1.5;
+  padding-bottom: 20px;
 }
 
 @media (min-width: 1024px) {
@@ -886,11 +917,11 @@ h2 {
     margin: 0 auto;
   }
 
-  .faq-item {
+  .faq-question {
     padding: 24px 0;
   }
 
-  .faq-item h3 {
+  .faq-question h3 {
     font-size: 1.05rem;
   }
 }
