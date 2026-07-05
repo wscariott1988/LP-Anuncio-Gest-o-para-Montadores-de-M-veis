@@ -258,14 +258,6 @@ h2 {
   color: var(--text-light);
 }
 
-.step-arrow {
-  padding: 6px 0;
-  display: flex;
-  justify-content: center;
-  opacity: 0.4;
-  transform: rotate(90deg);
-}
-
 /* === AUTORIDADE === */
 #autoridade {
   background: var(--primary);
@@ -1226,10 +1218,6 @@ footer {
 
   .step-card {
     margin: 0;
-  }
-
-  .step-arrow {
-    display: none;
   }
 
   .step-card:first-child {
