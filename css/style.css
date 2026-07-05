@@ -330,6 +330,12 @@ h2 {
   line-height: 1.5;
 }
 
+#resultados .cta-button,
+#como-funciona .cta-button,
+#investimento-section .cta-button {
+  margin-top: 28px;
+}
+
 @media (min-width: 640px) {
   .resultados-grid {
     max-width: 420px;
