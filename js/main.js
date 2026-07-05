@@ -75,6 +75,8 @@
       origemTexto = "WhatsApp";
     } else if (data.origem === "facebook") {
       origemTexto = "Facebook";
+    } else if (data.origem === "instagram") {
+      origemTexto = "Instagram";
     }
 
     var msg =

@@ -42,6 +42,8 @@ function doPost(e) {
       origemPlanilha = "#grupowhatsapp";
     } else if (data.origem === "facebook") {
       origemPlanilha = "#grupofacebook";
+    } else if (data.origem === "instagram") {
+      origemPlanilha = "#instagram";
     } else if (data.origem) {
       origemPlanilha = "#" + data.origem;
     }
