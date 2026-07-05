@@ -1372,7 +1372,7 @@ footer {
   .steps-grid {
     grid-template-columns: repeat(5, 1fr);
     gap: 12px;
-    align-items: start;
+    align-items: stretch;
   }
 
   .step-card:first-child,
