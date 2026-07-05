@@ -31,8 +31,19 @@ function doPost(e) {
         "Cidade",
         "Clientes por mês",
         "Já anuncia no Google?",
-        "Investimento pretendido"
+        "Investimento pretendido",
+        "Origem"
       ]);
+    }
+
+    // Mapeamento amigável da origem para a planilha
+    let origemPlanilha = "#direto";
+    if (data.origem === "whatsapp") {
+      origemPlanilha = "#grupowhatsapp";
+    } else if (data.origem === "facebook") {
+      origemPlanilha = "#grupofacebook";
+    } else if (data.origem) {
+      origemPlanilha = "#" + data.origem;
     }
 
     sheet.appendRow([
@@ -42,7 +53,8 @@ function doPost(e) {
       data.cidade || "",
       data.clientes || "",
       data.anuncia || "",
-      data.investimento || ""
+      data.investimento || "",
+      origemPlanilha
     ]);
 
     return ContentService

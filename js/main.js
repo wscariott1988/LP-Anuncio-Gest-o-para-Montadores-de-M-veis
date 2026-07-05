@@ -1,6 +1,10 @@
 (function () {
 
-  var FORM_URL = "https://script.google.com/macros/s/AKfycby1lu1x6MfKYWCe8opFFdOLAjEmLgGnDHoGj2GsvsCdIqCbehpPrb1HOCy1NdaCw1i7Dg/exec";
+  var FORM_URL = "https://script.google.com/macros/s/AKfycbyeW0XOH0le1RfwSPJnbEXOEydZU_qeJ_LQaUGLUcVGq4RBaV4X4o_XyAd2mPVdkpTIMg/exec";
+
+  // Captura a origem da URL para rastreamento de leads
+  var urlParams = new URLSearchParams(window.location.search);
+  var origem = urlParams.get("origem") || "direto";
 
   var form = document.getElementById("lead-form");
   var successBox = document.getElementById("form-success");
@@ -66,13 +70,21 @@
       ["mais-300-semana", "mais de R$ 300 por semana"]
     ];
 
+    var origemTexto = "Direto";
+    if (data.origem === "whatsapp") {
+      origemTexto = "WhatsApp";
+    } else if (data.origem === "facebook") {
+      origemTexto = "Facebook";
+    }
+
     var msg =
       "Olá! Meu nome é " + data.nome +
       ", sou de " + data.cidade + "." +
       " Atendo " + getLabel(data.clientes, clientesOpts) + " clientes por mês." +
       (data.anuncia === "Sim" ? " já anuncio no Google." : " não anuncio no Google.") +
       " Pretendo investir " + getLabel(data.investimento, investOpts) + "." +
-             " Quero ativar meus anúncios no Google para receber clientes na minha região.";
+      " Quero ativar meus anúncios no Google para receber clientes na minha região." +
+      "\n\nOrigem: " + origemTexto;
 
     window.location.href = "https://wa.me/5551980168744?text=" + encodeURIComponent(msg);
   }
@@ -129,7 +141,8 @@
       cidade: cidade.value.trim(),
       clientes: clientes.value,
       anuncia: getRadioValue("anuncia"),
-      investimento: investimento.value || "nao-informado"
+      investimento: investimento.value || "nao-informado",
+      origem: origem
     };
 
     console.log("Dados enviados:", data);
