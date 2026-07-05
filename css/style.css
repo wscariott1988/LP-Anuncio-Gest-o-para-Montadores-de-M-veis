@@ -577,6 +577,87 @@ h2 {
   }
 }
 
+/* === MDI FRAMEWORK === */
+#mdi-framework {
+  background: var(--card-bg);
+}
+
+.mdi-framework-sub {
+  font-size: 1rem;
+  color: var(--text-light);
+  margin-bottom: 28px;
+  line-height: 1.5;
+}
+
+.mdi-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mdi-card {
+  background: var(--bg);
+  padding: 28px 24px;
+  border-radius: var(--radius);
+  border: 1px solid #E5E7EB;
+  text-align: center;
+}
+
+.mdi-step {
+  width: 40px;
+  height: 40px;
+  background: var(--accent);
+  color: var(--text-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.125rem;
+  margin: 0 auto 16px;
+}
+
+.mdi-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.125rem;
+  margin-bottom: 8px;
+  color: var(--primary);
+}
+
+.mdi-card p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+.mdi-subtitle {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+.mdi-desc {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+@media (min-width: 1024px) {
+  .mdi-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+
+  .mdi-card {
+    padding: 36px 24px;
+  }
+}
+
 /* === FORM === */
 #form-section {
   background: var(--bg);
