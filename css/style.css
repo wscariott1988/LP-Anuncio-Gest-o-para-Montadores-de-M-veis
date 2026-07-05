@@ -145,6 +145,29 @@ h2 {
   outline-offset: 2px;
 }
 
+/* === RUPTURE BAR === */
+.rupture-bar {
+  background: #1E293B;
+  padding: 32px 0;
+  border-bottom: 4px solid var(--accent);
+}
+
+.rupture-truth {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-white);
+  line-height: 1.4;
+  text-align: center;
+  letter-spacing: -0.01em;
+}
+
+@media (min-width: 1024px) {
+  .rupture-truth {
+    font-size: 1.5rem;
+  }
+}
+
 /* === PROBLEMA === */
 #problema {
   background: #1E293B;
