@@ -50,6 +50,10 @@
       return;
     }
 
+    if (typeof fbq === "function") {
+      fbq('track', 'Lead');
+    }
+
     var clientesOpts = [
       ["menos-30", "menos de 30"],
       ["30-45", "de 30 a 45"],
