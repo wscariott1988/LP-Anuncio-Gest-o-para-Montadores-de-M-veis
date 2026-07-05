@@ -68,7 +68,7 @@
       " Atendo " + getLabel(data.clientes, clientesOpts) + " clientes por mês." +
       (data.anuncia === "Sim" ? " já anuncio no Google." : " não anuncio no Google.") +
       " Pretendo investir " + getLabel(data.investimento, investOpts) + "." +
-      " Gostaria de saber mais sobre o sistema de geração de clientes.";
+      " Gostaria de saber mais sobre o serviço de gestão de Google Ads.";
 
     window.location.href = "https://wa.me/5551980168744?text=" + encodeURIComponent(msg);
   }
