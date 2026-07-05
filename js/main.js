@@ -163,15 +163,19 @@
     setTimeout(finalizar, 3000);
   });
 
-  var ctas = document.querySelectorAll('a[href="#form-section"]');
+  var ctas = document.querySelectorAll('a[href^="#"]');
   for (var i = 0; i < ctas.length; i++) {
-    ctas[i].addEventListener("click", function (e) {
-      e.preventDefault();
-      var target = document.getElementById("form-section");
-      if (target) {
-        target.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
-    });
+    (function (link) {
+      link.addEventListener("click", function (e) {
+        var href = this.getAttribute("href");
+        if (href === "#") return;
+        e.preventDefault();
+        var target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      });
+    })(ctas[i]);
   }
 
 })();
