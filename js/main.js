@@ -4,7 +4,12 @@
 
   // Captura a origem da URL para rastreamento de leads
   var urlParams = new URLSearchParams(window.location.search);
-  var origemPadrao = window.location.pathname.indexOf("/instagram") !== -1 ? "instagram" : "direto";
+  var origemPadrao = "direto";
+  if (window.location.pathname.indexOf("/instagram") !== -1) {
+    origemPadrao = "instagram";
+  } else if (window.location.pathname.indexOf("/lp2") !== -1) {
+    origemPadrao = "facebook_ads";
+  }
   var origem = urlParams.get("origem") || origemPadrao;
 
   var form = document.getElementById("lead-form");

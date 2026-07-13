@@ -1159,6 +1159,66 @@ h2 {
   }
 }
 
+/* === LP2: INCLUSO === */
+#incluso {
+  background: var(--card-bg);
+}
+
+/* === LP2: HERO DETAIL === */
+.hero-detail {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.cta-subtext {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 12px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+/* === LP2: ESPECIALIZADO === */
+#especializado {
+  background: var(--primary);
+  color: var(--text-white);
+}
+
+#especializado h2 {
+  color: var(--text-white);
+}
+
+/* === LP2: CHECKLIST === */
+.lp2-checklist {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 28px;
+}
+
+.lp2-checklist li {
+  padding: 12px 0 12px 32px;
+  position: relative;
+  font-size: 1rem;
+  color: var(--text);
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.lp2-checklist li:last-child {
+  border-bottom: none;
+}
+
+.lp2-checklist li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 12px;
+  font-size: 0.9rem;
+  color: #22C55E;
+  font-weight: 700;
+}
+
 /* === CTA FINAL === */
 #cta-final {
   background: var(--primary);
