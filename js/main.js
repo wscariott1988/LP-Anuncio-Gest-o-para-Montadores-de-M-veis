@@ -12,6 +12,15 @@
   }
   var origem = urlParams.get("origem") || origemPadrao;
 
+  var whatsappLinks = document.querySelectorAll('a[href*="wa.me"]');
+  for (var w = 0; w < whatsappLinks.length; w++) {
+    whatsappLinks[w].addEventListener("click", function () {
+      if (typeof fbq === "function") {
+        fbq("track", "Lead");
+      }
+    });
+  }
+
   var form = document.getElementById("lead-form");
   var successBox = document.getElementById("form-success");
   var thanksBox = document.getElementById("form-thanks");
