@@ -1357,18 +1357,6 @@ footer {
     margin-bottom: 28px;
   }
 
-  .steps-grid--3 {
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 24px;
-  }
-
-  .steps-grid--3 .step-card:first-child,
-  .steps-grid--3 .step-card:last-child {
-    grid-column: auto;
-    max-width: 100%;
-    justify-self: auto;
-  }
-
   #hero {
     min-height: 100vh;
     display: flex;
@@ -1421,6 +1409,18 @@ footer {
 
   .step-card:first-child,
   .step-card:last-child {
+    grid-column: auto;
+    max-width: 100%;
+    justify-self: auto;
+  }
+
+  .steps-grid--3 {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+  }
+
+  .steps-grid--3 .step-card:first-child,
+  .steps-grid--3 .step-card:last-child {
     grid-column: auto;
     max-width: 100%;
     justify-self: auto;
