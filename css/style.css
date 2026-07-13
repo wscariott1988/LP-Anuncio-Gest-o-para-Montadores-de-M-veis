@@ -1159,6 +1159,42 @@ h2 {
   }
 }
 
+/* === LP2: STEPS GRID (3 cards) === */
+.steps-grid--3 {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.steps-grid--3 .step-card:first-child {
+  max-width: 100%;
+}
+
+@media (min-width: 640px) {
+  .steps-grid--3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .steps-grid--3 .step-card:first-child {
+    grid-column: 1 / -1;
+    max-width: 100%;
+    justify-self: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .steps-grid--3 {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+
+  .steps-grid--3 .step-card:first-child {
+    grid-column: auto;
+  }
+}
+
 /* === LP2: INCLUSO === */
 #incluso {
   background: var(--card-bg);
