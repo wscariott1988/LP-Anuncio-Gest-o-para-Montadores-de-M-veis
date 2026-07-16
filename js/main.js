@@ -9,6 +9,8 @@
     origemPadrao = "instagram";
   } else if (window.location.pathname.indexOf("/lp2") !== -1) {
     origemPadrao = "facebook_ads";
+  } else if (window.location.pathname.indexOf("/lp3") !== -1) {
+    origemPadrao = "meta_ads";
   }
   var origem = urlParams.get("origem") || origemPadrao;
 
@@ -92,6 +94,8 @@
       origemTexto = "Facebook";
     } else if (data.origem === "instagram") {
       origemTexto = "Instagram";
+    } else if (data.origem === "meta_ads") {
+      origemTexto = "Meta Ads";
     }
 
     var msg =
